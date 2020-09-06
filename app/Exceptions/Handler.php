@@ -53,7 +53,7 @@ class Handler extends ExceptionHandler
     {
         if ($exception instanceof AuthenticationException) {
             return response()->json([
-                'message' => $exception->getMessage() ?? 'Unauthenticated.',
+                'error' => ['message' => $exception->getMessage() ?? 'Unauthenticated.']
             ], Response::HTTP_UNAUTHORIZED);
         }
 

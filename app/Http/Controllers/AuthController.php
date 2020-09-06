@@ -9,11 +9,6 @@ use Illuminate\Http\Request;
 class AuthController extends Controller
 {
     /**
-     * @var User
-     */
-    private $user;
-
-    /**
      * Registration
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
