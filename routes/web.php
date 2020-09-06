@@ -12,5 +12,10 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return 'CelTrack API v1';
+});
+
+$router->group(['prefix' => 'v1'], function () use ($router) {
+    $router->post('register', 'AuthController@register');
+    $router->post('login', 'AuthController@login');
 });
